@@ -1,32 +1,56 @@
-Benchmarking Model Codes
-A Comprehensive Benchmark Suite for Software Vulnerability Detection Using Machine Learning, Deep Learning, Transformer Architectures, and Large Language Models
-Overview
+<div align="center">
 
-This repository presents a large-scale benchmarking framework for automated software vulnerability detection across multiple learning paradigms, including:
+# Benchmarking Model Codes
 
-Traditional Machine Learning
-Deep Learning Architectures
-Transformer-Based Models
-Open-Source Large Language Models (LLMs)
+### Comprehensive Benchmarking Framework for Software Vulnerability Detection  
+### using Machine Learning, Deep Learning, Transformers, and Large Language Models
 
-The benchmark is designed to evaluate and compare model performance, contextual understanding, representation learning capability, and generalization behavior across widely used vulnerability detection datasets.
+<p align="center">
+  <img src="https://img.shields.io/badge/Domain-Cybersecurity-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Task-Vulnerability%20Detection-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Research-Benchmarking-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Framework-PyTorch-orange?style=for-the-badge">
+</p>
 
-The repository emphasizes:
+</div>
 
-Reproducible experimentation
-Unified evaluation workflows
-Cross-model comparative analysis
-Security-oriented code intelligence research
-Research Objectives
+---
 
-The primary objectives of this benchmark framework are:
+# Overview
 
-To evaluate the effectiveness of diverse learning paradigms for software vulnerability detection
-To compare classical machine learning methods with modern transformer and LLM-based architectures
-To analyze model generalization across heterogeneous vulnerability datasets
-To establish a unified and reproducible experimental framework for vulnerability detection research
-To investigate contextual semantic understanding in source-code-focused models
-Repository Structure
+This repository presents a large-scale **research-oriented benchmarking framework** for automated software vulnerability detection across multiple learning paradigms, including:
+
+- Traditional Machine Learning
+- Deep Learning Architectures
+- Transformer-Based Models
+- Open-Source Large Language Models (LLMs)
+
+The framework is designed to systematically evaluate:
+- Model performance
+- Representation learning capability
+- Contextual semantic understanding
+- Cross-dataset generalization behavior
+- Security-oriented code intelligence
+
+across widely used vulnerability detection datasets such as **Devign** and **PrimeVul**.
+
+---
+
+# Research Motivation
+
+Software vulnerabilities remain one of the most critical challenges in modern software engineering and cybersecurity. Recent advances in transformer architectures and code-specialized LLMs have significantly improved automated vulnerability detection; however, comprehensive comparative benchmarking across heterogeneous model families remains limited.
+
+This repository aims to provide:
+- A unified experimental infrastructure
+- Reproducible benchmarking workflows
+- Cross-paradigm comparative analysis
+- Modular research pipelines for future extensions
+
+---
+
+# Repository Architecture
+
+```text
 Benchmarking-model-codes/
 │
 ├── Devign/
@@ -59,7 +83,6 @@ Benchmarking-model-codes/
 │       └── DeepSeekCoder/
 │
 ├── PrimeVul/
-│   │
 │   ├── MachineLearning/
 │   ├── DeepLearning/
 │   ├── Transformers/
@@ -72,164 +95,210 @@ Benchmarking-model-codes/
 ├── docs/
 ├── requirements.txt
 └── README.md
-Benchmark Categories
-Traditional Machine Learning
+```
 
-The repository includes classical machine learning baselines widely used for structured feature-based vulnerability classification:
+---
 
-Logistic Regression
-Support Vector Machine (SVM)
-XGBoost
-Random Forest
-Decision Tree
+# Implemented Models
 
-These models serve as foundational baselines for comparative evaluation against neural and transformer-based architectures.
+## Traditional Machine Learning
 
-Deep Learning Architectures
+| Category | Models |
+|---|---|
+| Classical ML | Logistic Regression, SVM, XGBoost, Random Forest, Decision Tree |
 
-Deep learning implementations focus on sequence learning, structural representation learning, and semantic feature extraction from source code:
+These models serve as foundational baselines for comparative evaluation against neural and transformer-based approaches.
 
-Convolutional Neural Networks (CNN)
-Long Short-Term Memory Networks (LSTM)
-Bidirectional LSTM (BiLSTM)
-Gated Recurrent Units (GRU)
-Deep Graph Convolutional Neural Networks (DGCNN)
-Graph Convolutional Networks (GCN)
+---
 
-These architectures are evaluated for their ability to capture syntactic and contextual vulnerability patterns.
+## Deep Learning Architectures
 
-Transformer-Based Models
+| Category | Models |
+|---|---|
+| Sequence Learning | LSTM, BiLSTM, GRU |
+| Spatial Learning | CNN |
+| Graph Neural Networks | DGCNN, GCN |
 
-Transformer architectures are evaluated for contextual code understanding and semantic representation learning:
+These architectures are evaluated for their ability to capture:
+- syntactic structures
+- semantic representations
+- contextual vulnerability patterns
+- graph-based code relationships
 
-CodeBERT
-GraphCodeBERT
-CodeT5
-PLBart
-UniXCoder
+---
 
-The benchmark investigates the effectiveness of pre-trained code representation models for vulnerability detection tasks.
+## Transformer-Based Models
 
-Large Language Models (LLMs)
+| Model Family | Implementations |
+|---|---|
+| Encoder-Based | CodeBERT, GraphCodeBERT |
+| Encoder-Decoder | CodeT5, PLBart |
+| Unified Representation Models | UniXCoder |
 
-The repository also includes experimentation pipelines for instruction-tuned and code-specialized open-source LLMs:
+The benchmark investigates transformer effectiveness for:
+- contextual code understanding
+- semantic representation learning
+- vulnerability localization
+- source code intelligence
 
-CodeLlama
-Mistral
-DeepSeekCoder
+---
 
-These models are explored for:
+## Large Language Models (LLMs)
 
-contextual vulnerability reasoning
-semantic code understanding
-instruction-based classification
-zero-shot and fine-tuned vulnerability detection
-Datasets
-Devign Dataset
+| Model | Purpose |
+|---|---|
+| CodeLlama | Instruction-based vulnerability reasoning |
+| Mistral | Fine-tuned code understanding |
+| DeepSeekCoder | Security-oriented code intelligence |
 
-The Devign dataset is a widely adopted benchmark dataset containing vulnerable and non-vulnerable real-world functions extracted from open-source software projects.
+The LLM experiments explore:
+- zero-shot vulnerability detection
+- instruction-tuned classification
+- semantic reasoning
+- contextual vulnerability analysis
 
-The dataset is used to evaluate:
+---
 
-binary vulnerability classification
-contextual code understanding
-neural representation learning
-PrimeVul Dataset
+# Datasets
 
-PrimeVul is a large-scale vulnerability detection dataset designed for modern source code security analysis and benchmarking.
+## Devign
 
-The dataset supports:
+A widely adopted benchmark dataset containing real-world vulnerable and non-vulnerable functions extracted from open-source software projects.
 
-large-scale vulnerability classification
-transformer-based experimentation
-LLM-oriented security research
-cross-dataset generalization studies
-Experimental Pipeline
+### Evaluation Focus
+- Binary vulnerability classification
+- Semantic understanding
+- Neural representation learning
 
-The repository includes implementations for:
+---
 
-Data preprocessing
-Tokenization pipelines
-Feature engineering
-Model training
-Fine-tuning workflows
-Inference pipelines
-Evaluation and benchmarking
-Visualization generation
+## PrimeVul
 
-Additional utilities are provided for:
+A large-scale vulnerability detection dataset designed for modern security-oriented source code analysis.
 
-reproducibility
-experiment tracking
-result aggregation
-comparative analysis
-Evaluation Metrics
+### Evaluation Focus
+- Large-scale benchmarking
+- Transformer experimentation
+- LLM-based security analysis
+- Cross-dataset generalization
+
+---
+
+# Experimental Pipeline
+
+The repository includes modular implementations for:
+
+- Data preprocessing
+- Tokenization pipelines
+- Feature engineering
+- Graph construction
+- Model training
+- Fine-tuning workflows
+- Inference pipelines
+- Benchmark evaluation
+- Visualization generation
+
+---
+
+# Evaluation Metrics
 
 All models are evaluated using standardized classification metrics:
 
-Accuracy
-Precision
-Recall
-F1-Score
+| Metric | Purpose |
+|---|---|
+| Accuracy | Overall prediction correctness |
+| Precision | Vulnerability prediction reliability |
+| Recall | Vulnerability detection capability |
+| F1-Score | Balanced classification performance |
 
-Additional analytical artifacts may include:
+Additional analysis includes:
+- Confusion Matrices
+- Training Curves
+- Validation Curves
+- Comparative Benchmark Graphs
+- Cross-Architecture Analysis
 
-Confusion Matrices
-Training and Validation Curves
-Comparative Benchmark Graphs
-Cross-Model Performance Analysis
-Research Contributions
+---
 
-This repository aims to contribute toward:
+# Research Contributions
 
-Unified benchmarking for vulnerability detection research
-Comparative analysis across heterogeneous model families
-Investigation of representation learning in source code intelligence
-Reproducible security-oriented machine learning experimentation
-Open-source benchmarking infrastructure for future research
-Installation
+This benchmark framework aims to contribute toward:
+
+- Unified benchmarking for vulnerability detection
+- Comparative analysis across heterogeneous architectures
+- Investigation of contextual source code intelligence
+- Reproducible security-oriented ML experimentation
+- Open-source benchmarking infrastructure for future research
+
+---
+
+# Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/vuln-bench-2026/Benchmarking-model-codes.git
+```
 
 Move into the repository:
 
+```bash
 cd Benchmarking-model-codes
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
-Usage
+```
 
-Each model implementation contains:
+---
 
-training scripts
-preprocessing workflows
-evaluation pipelines
-inference utilities
+# Usage
+
+Each implementation directory contains:
+- training workflows
+- preprocessing scripts
+- evaluation pipelines
+- inference utilities
 
 Navigate to the corresponding dataset and architecture directory to execute experiments.
 
-Reproducibility
+---
 
-This repository is structured to promote reproducible experimentation through:
+# Reproducibility
 
-modular implementation design
-isolated dataset pipelines
-consistent evaluation procedures
-standardized benchmark configurations
-Notes
-Large datasets and pretrained checkpoints are intentionally excluded due to storage constraints.
-Certain experimental or unpublished implementations may not be publicly released.
-Performance may vary depending on hardware configuration, preprocessing strategies, and hyperparameter settings.
-Research Scope
+The repository is structured to promote reproducible experimentation through:
+- modular pipeline design
+- isolated dataset configurations
+- standardized evaluation protocols
+- reproducible benchmark workflows
+
+---
+
+# Notes
+
+- Large datasets and pretrained checkpoints are intentionally excluded due to storage limitations.
+- Certain experimental or unpublished implementations may not be publicly released.
+- Performance may vary depending on preprocessing configuration, hardware environment, and hyperparameter settings.
+
+---
+
+# Research Scope
 
 This benchmark framework focuses on advancing research in:
 
-Software Vulnerability Detection
-Secure Code Intelligence
-AI for Cybersecurity
-Transformer-Based Code Analysis
-Graph-Based Neural Vulnerability Detection
-Large Language Models for Software Security
+- Software Vulnerability Detection
+- Secure Code Intelligence
+- AI for Cybersecurity
+- Transformer-Based Code Analysis
+- Graph Neural Networks for Security
+- Large Language Models for Software Engineering
+
+---
+
+<div align="center">
+
+### Research-Oriented Benchmarking for Secure AI-Driven Software Analysis
+
+</div>
